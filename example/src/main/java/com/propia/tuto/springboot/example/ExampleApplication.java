@@ -1,5 +1,7 @@
 package com.propia.tuto.springboot.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * @SpringBootApplication incluye las isguientes anotaciones @Configuration @EnableAutoConfiguration @ComponentScan
  * @Configuration: Clase de configuracion.
@@ -12,10 +14,14 @@ package com.propia.tuto.springboot.example;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.propia.tuto.springboot.example.application_configuration.CustomExitConfiguration;
+
 @SpringBootApplication
 public class ExampleApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(ExampleApplication.class, args);
+		System.out.println(">> ExampleApplication:  "	+ "Se ha lanzado la ejecuión la aplicación");
 	}
 }
