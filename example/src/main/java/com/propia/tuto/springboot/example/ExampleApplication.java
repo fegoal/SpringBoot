@@ -14,14 +14,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.propia.tuto.springboot.example.application_configuration.CustomExitConfiguration;
+import com.propia.tuto.springboot.example.bean.GreatingBeanWithAnotherConfigurationFile;
+import com.propia.tuto.springboot.example.bean.GreatingBeanWithDefaultConfiguration;
 
 @SpringBootApplication
 public class ExampleApplication {
 
+	@Autowired
+	GreatingBeanWithDefaultConfiguration greatingBeanWithDefaultConfiguration;
+	@Autowired
+	GreatingBeanWithAnotherConfigurationFile greatingBeanWithAnotherConfiguration;
+
+	
 	public static void main(String[] args) {
-		
 		SpringApplication.run(ExampleApplication.class, args);
-		System.out.println(">> ExampleApplication:  "	+ "Se ha lanzado la ejecuión la aplicación");
+
 	}
 }
